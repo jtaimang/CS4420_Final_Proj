@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211090328) do
+ActiveRecord::Schema.define(version: 20171211092152) do
+
+  create_table "launches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "meats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "recipes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "meat_id"
+    t.integer "vegetable_id"
+    t.integer "starch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

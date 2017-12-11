@@ -6,7 +6,7 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -14,6 +14,7 @@
     <% @starches.each do |starch| %>
       <tr>
         <td><%= starch.name %></td>
+        <td><%= starch.id %></td>
         <td><%= link_to 'Show', starch %></td>
         <td><%= link_to 'Edit', edit_starch_path(starch) %></td>
         <td><%= link_to 'Destroy', starch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
