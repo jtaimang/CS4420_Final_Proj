@@ -1,0 +1,22 @@
+<%= form_with(model: starch, local: true) do |form| %>
+  <% if starch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(starch.errors.count, "error") %> prohibited this starch from being saved:</h2>
+
+      <ul>
+      <% starch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :starch_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

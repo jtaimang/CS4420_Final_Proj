@@ -1,0 +1,2 @@
+class Starch < ApplicationRecord
+end
